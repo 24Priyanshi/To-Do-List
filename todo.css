@@ -27,7 +27,7 @@
 .todo{
     width: 100%;
     max-width: 540px;
-    background-color: rgba(255, 255, 255, 0.666);
+    background-color: rgba(196, 191, 191, 0.922);
     margin: 100px auto 20px;
     padding:40px 30px 70px ;
     border-radius: 20px;
@@ -51,6 +51,7 @@ input{
     padding: 10px;
     font-weight: 14px;
     margin-top: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
 button{
@@ -72,6 +73,7 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 ul li::before{
     content: '';
@@ -79,9 +81,32 @@ ul li::before{
     height: 28px;
     width: 28px;
     border-radius:50% ;
-    background-image:url(images/unchecked.png) ;
+    background-image:url(unchecked.png) ;
     background-size: cover;
     background-position: center;
     top: 12px;
     left: 8px;
+}
+ul li button{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #2b1e1e;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+
+}
+ul li button:hover{
+    background: #556587 ;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
 }
